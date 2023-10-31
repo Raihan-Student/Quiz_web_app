@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Home</title>
+</head>
+<body>
+    <h1>Welcome to the Quiz App</h1>
+    <ul>
+        {% for subject in subjects %}
+            <li><a href="{% url 'quiz_detail' subject.id %}">{{ subject.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
